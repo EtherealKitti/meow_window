@@ -8,7 +8,10 @@ add_library(${PROJECT_NAME}
     ${SOURCE_FILES}
 )
 
-include_directories(dependencies)
+target_include_directories(${PROJECT_NAME}
+    PUBLIC
+        dependencies
+)
 
 add_subdirectory(dependencies/Vulkan-Headers)
 add_subdirectory(dependencies/Vulkan-Loader)
